@@ -1,38 +1,25 @@
 # Midterm NLP Assignment
 
 **Title**: Traditional NLP Models on TapTap Game Reviews  
-Author: _Your Name_ (Student ID)
+**Author**: Runze Kou (2023106135)
 
 ## Project Brief
-We compare two classic NLP methods—**CBOW** and **TF‑IDF**—on a Chinese game‑review corpus from TapTap (≈320k rows).
-The goal is to evaluate:
-1. Center‑word prediction accuracy (CBOW)
-2. Similar‑review ranking quality (TF‑IDF)
+Compare two classic NLP methods—**CBOW** and **TF-IDF**—on a Chinese game-review dataset from TapTap.  
+The goals are to evaluate:  
+1. Center-word prediction accuracy (CBOW)  
+2. Similar-review ranking quality (TF-IDF)
 
-## Installation
+## Installation & Quick Start
+
 ```bash
-python -m venv .venv && source .venv/bin/activate
+# 1. Create and activate a Python 3.11 virtual environment
+python -m venv .venv
+# Windows (Git Bash):
+source .venv/Scripts/activate
+# macOS/Linux:
+# source .venv/bin/activate
+
+# 2. Upgrade pip and install all dependencies
+pip install --upgrade pip
 pip install -r requirements.txt
-```
 
-## How to Run
-```bash
-# 1. Download raw data (needs Kaggle API key)
-python scripts/download_taptap.py
-
-# 2. Clean & tokenize
-python scripts/preprocess.py
-
-# 3. Open notebooks and run cells in order:
-#    EDA → train_cbow → eval_cbow → tfidf_rank → error_analysis
-```
-
-## Key Features
-* Automated data download & preprocessing
-* CBOW word‑embedding training with gensim
-* TF‑IDF sparse index & cosine‑similarity search
-* Jupyter notebooks for reproducibility
-* Unit test for text cleaner
-
-## License
-MIT
